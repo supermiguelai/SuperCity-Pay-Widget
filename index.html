@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="staging/supercity-payment-form.js"></script>
+  <link rel="stylesheet" href="staging/supercity-payment-form.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.initPaymentForm) {
+        window.initPaymentForm({
+          user: {
+            fullName: 'John Doe',
+            caseNumber: '#20240CM0490',
+            address: {
+              street: '1234 Elm Street',
+              city: 'Springfield',
+              state: 'Illinois',
+              zipCode: '62704',
+            },
+            phoneNumber: '+15550101234',
+            email: 'test@example.com',
+          },
+          service: {
+            title: 'Mediation Service',
+            basePrice: 300,
+            cardProcessingFeePercentage: 2.5,
+            convenienceFeeAmount: 2,
+            superCityPayFeeAmount: 1,
+          },
+          namespace: 'el-paso',
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
